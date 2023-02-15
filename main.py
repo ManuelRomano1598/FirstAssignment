@@ -122,8 +122,6 @@ guessed_labels = []
 for chapter in test_corpus:
     for sent in chapter:
         for word in sent:
-            if word == 'FAKEEEEEEEEEEEEE':
-                a=0#debug
             likelihood1 += abs(math.log10(trainer(word, english_prob)))
     probClass1 = abs(math.log10(english_prior)) + likelihood1
 
